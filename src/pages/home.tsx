@@ -78,19 +78,21 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.8 }}
             >
-              <Button
-                size="lg"
-                className="bg-gold-gradient text-black hover:shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300 font-semibold px-8 py-4 text-lg group"
-              >
-                Download Resume
-                <motion.div
-                  className="ml-3"
-                  animate={{ y: [0, 5, 0] }}
-                  transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
+              <a href="/Happy-Adebayo-CV-Frontend-Developer.docx" download>
+                <Button
+                  size="lg"
+                  className="bg-gold-gradient text-black hover:shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300 font-semibold px-8 py-4 text-lg group"
                 >
-                  <ArrowDown className="w-5 h-5" />
-                </motion.div>
-              </Button>
+                  Download Resume
+                  <motion.div
+                    className="ml-3"
+                    animate={{ y: [0, 5, 0] }}
+                    transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
+                  >
+                    <ArrowDown className="w-5 h-5" />
+                  </motion.div>
+                </Button>
+              </a>
 
               <div className="flex space-x-6">
                 {[
