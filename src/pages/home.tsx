@@ -6,7 +6,6 @@ import {
   ExternalLink,
   Code,
   Database,
-  Globe,
   ArrowDown,
   Star,
   Sparkles,
