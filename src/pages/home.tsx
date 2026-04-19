@@ -215,7 +215,7 @@ export default function Portfolio() {
                 {
                   icon: Code,
                   title: "Frontend",
-                  desc: "React",
+                  desc: "React, Nextjs",
                   color: "from-blue-500 to-purple-600",
                 },
                 {

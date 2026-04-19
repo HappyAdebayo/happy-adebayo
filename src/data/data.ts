@@ -1,6 +1,6 @@
 import eccomerce from '@/assets/eccomerce.png';
-import chooz from '@/assets/chooz.png'
-import lincpay from '@/assets/lincpay.png'
+import hopehaven from '@/assets/hopehaven.png'
+import frameflow from '@/assets/frameflow.png'
 import {
   FileCode,    
   Atom,        
@@ -53,22 +53,22 @@ const techStack = [
       live: "https://anointedsuperstore.store/",
     },
     {
-      title: "Polling platform",
+      title: "HopeHaven",
       siteplatform:'Website',
       description:
-        "Monetizable polling platform enabling users to create and share polls, earn from vote engagement, and analyze results in real-time.",
-      tech: ["Php", "Paystack", "Tailwind", "MySQL"],
-      image: chooz,
-      live: "https://choozplatform.com",
+        "HopeHaven is a modern orphanage website designed to create awareness, encourage donations, and connect volunteers with children in need. The platform focuses on a warm, trustworthy user experience with clear navigation, impactful storytelling, and responsive design.",
+      tech: ["nexjs", "tailwindcss"],
+      image: hopehaven,
+      live: "https://hope-haven-of4y.vercel.app/",
     },
     {
-      title: "School Finance App",
-      siteplatform:'App',
+      title: "FrameFlow",
+      siteplatform:'Website',
       description:
-        "All-in-one student finance app that simplifies fee payments, tracks transactions, and provides a secure platform for managing school-related expenses.",
-      tech: ["Php", "Paystack",  "Expo", "React Native"],
-      image: lincpay,
-      live: "#",
+        "FrameFlow is a modern photography portfolio website designed to showcase high-quality visual work in a clean, immersive layout. Built with a dark, minimal aesthetic, it focuses on highlighting photography through bold imagery, smooth interactions, and an intuitive gallery experience with category filtering and lightbox previews.",
+      tech: ["nexjs", "tailwindcss"],
+      image: frameflow,
+      live: "https://frameflow-sigma.vercel.app/",
     },
   ]
 
