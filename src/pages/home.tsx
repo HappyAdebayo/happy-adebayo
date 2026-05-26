@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import {
   Github,
@@ -9,16 +10,27 @@ import {
   ArrowDown,
   Star,
   Sparkles,
+  Smartphone,
+  Download,
+  ChevronLeft,
+  ChevronRight,
+  CheckCircle2,
+  Info,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import AnimatedCounter from "@/components/animated-counter"
-import { techStack,projects,stats } from "@/data/data"
+import { techStack,projects,stats,mobileApps } from "@/data/data"
 
 export default function Portfolio() {
   const { scrollYProgress } = useScroll()
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
+
+  const [activeAppIndex, setActiveAppIndex] = useState(0)
+  const [activeScreenIndex, setActiveScreenIndex] = useState(0)
+
+  const activeApp = mobileApps[activeAppIndex]
 
   return (
     <div className="">
@@ -298,11 +310,235 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Mobile Apps Section */}
+      <section id="mobile-apps" className="py-24 bg-gradient-to-b from-transparent to-yellow-500/5">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl font-bold mb-6 bg-gold-gradient bg-clip-text text-transparent">
+              Mobile Applications
+            </h2>
+            <div className="w-24 h-1 bg-gold-gradient mx-auto mb-8 rounded-full"></div>
+            <p className="text-gray-400 text-xl max-w-2xl mx-auto">
+              High-performance, beautifully crafted React Native apps designed for seamless user experiences.
+            </p>
+          </motion.div>
+
+          {/* App Tabs Switcher */}
+          <div className="flex justify-center mb-16">
+            <div className="bg-gray-900/80 p-2 rounded-2xl border border-yellow-500/20 flex gap-4 max-w-md w-full relative z-10 backdrop-blur-md">
+              {mobileApps.map((app, index) => (
+                <button
+                  key={app.id}
+                  onClick={() => {
+                    setActiveAppIndex(index);
+                    setActiveScreenIndex(0);
+                  }}
+                  className={`flex-1 py-4 px-6 rounded-xl font-bold transition-all duration-300 relative text-center text-lg ${
+                    activeAppIndex === index
+                      ? "text-black shadow-lg shadow-yellow-500/10"
+                      : "text-gray-400 hover:text-yellow-400"
+                  }`}
+                >
+                  {activeAppIndex === index && (
+                    <motion.div
+                      layoutId="activeMobileAppTab"
+                      className="absolute inset-0 bg-gold-gradient rounded-xl"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    <Smartphone className="w-5 h-5" />
+                    {app.title}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* App Showcase Content */}
+          <div className="grid lg:grid-cols-12 gap-12 items-center max-w-6xl mx-auto">
+            {/* Left Side: App Details */}
+            <motion.div
+              key={activeApp.id}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-7 space-y-8"
+            >
+              <div className="space-y-4">
+                <div className="flex flex-wrap items-center gap-3">
+                  <Badge className="bg-yellow-400/10 text-yellow-400 border border-yellow-400/20 px-3 py-1 font-semibold text-sm">
+                    {activeApp.platform}
+                  </Badge>
+                  <div className="flex gap-2">
+                    {activeApp.tech.map((t, i) => (
+                      <Badge key={i} variant="outline" className="border-gray-700 text-gray-300">
+                        {t}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+                <h3 className="text-4xl font-extrabold text-white">
+                  {activeApp.title}
+                </h3>
+                <p className="text-yellow-400 text-xl font-medium tracking-wide">
+                  {activeApp.tagline}
+                </p>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  {activeApp.description}
+                </p>
+              </div>
+
+              {/* Core Features */}
+              <div className="space-y-4">
+                <h4 className="text-xl font-bold text-white flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-yellow-400" />
+                  Key Features
+                </h4>
+                <ul className="grid sm:grid-cols-2 gap-4">
+                  {activeApp.features.map((feature, i) => (
+                    <li key={i} className="flex gap-3 text-gray-400 text-base leading-snug">
+                      <span className="text-yellow-400 font-bold">•</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Screenshot Selector Flow */}
+              <div className="space-y-4">
+                <h4 className="text-xl font-bold text-white flex items-center gap-2">
+                  <Info className="w-5 h-5 text-yellow-400" />
+                  Explore App Flow
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {activeApp.screens.map((screen, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveScreenIndex(idx)}
+                      className={`px-4 py-2 rounded-xl border text-sm font-semibold transition-all duration-300 ${
+                        activeScreenIndex === idx
+                          ? "bg-yellow-400/20 text-yellow-400 border-yellow-400 shadow-md shadow-yellow-500/5"
+                          : "border-gray-800 bg-gray-950 text-gray-400 hover:border-gray-700 hover:text-gray-300"
+                      }`}
+                    >
+                      {screen.label}
+                    </button>
+                  ))}
+                </div>
+                <p className="text-gray-500 text-sm italic">
+                  {activeApp.screens[activeScreenIndex].description}
+                </p>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="pt-4 flex flex-wrap gap-4 items-center">
+                {activeApp.apkUrl ? (
+                  <a href={activeApp.apkUrl} download={`DebtTracker.apk`}>
+                    <Button className="bg-gold-gradient text-black hover:shadow-xl hover:shadow-yellow-500/15 font-bold px-8 py-6 text-lg rounded-2xl group transition-all duration-300">
+                      <Download className="w-5 h-5 mr-3 group-hover:translate-y-0.5 transition-transform" />
+                      Download Android App (APK)
+                    </Button>
+                  </a>
+                ) : (
+                  <div className="bg-gray-900/50 border border-yellow-500/20 rounded-2xl p-4 max-w-md">
+                    <p className="text-yellow-400 font-bold mb-1 flex items-center gap-2">
+                      <Info className="w-4 h-4" /> Showcase Only
+                    </p>
+                    <p className="text-gray-400 text-sm">
+                      LincPay does not require an installation package. You can preview all screen transitions from sign-up to dashboard right here in the interactive phone frame!
+                    </p>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+
+            {/* Right Side: Smartphone Mockup Carousel */}
+            <div className="lg:col-span-5 flex flex-col items-center justify-center">
+              <div className="relative w-[300px] h-[600px] bg-black rounded-[48px] border-[8px] border-gray-800 shadow-2xl shadow-yellow-500/5 flex flex-col items-center overflow-hidden">
+                {/* Phone Glass Glow */}
+                <div className="absolute inset-0 border border-white/10 rounded-[40px] pointer-events-none z-30" />
+                
+                {/* Camera Notch / Island */}
+                <div className="absolute top-3 w-32 h-6 bg-black rounded-full z-30 flex items-center justify-center">
+                  <div className="w-3 h-3 bg-gray-900 rounded-full mr-2" />
+                  <div className="w-2 h-2 bg-gray-900 rounded-full" />
+                </div>
+
+                {/* Speaker Grill */}
+                <div className="absolute top-1 w-12 h-1 bg-gray-700 rounded-full z-30" />
+
+                {/* Left/Right Carousel Control Overlays */}
+                <button
+                  onClick={() =>
+                    setActiveScreenIndex((prev) =>
+                      prev === 0 ? activeApp.screens.length - 1 : prev - 1
+                    )
+                  }
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 border border-yellow-500/30 flex items-center justify-center text-yellow-400 hover:text-white transition-all duration-300 z-30"
+                  aria-label="Previous screenshot"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={() =>
+                    setActiveScreenIndex((prev) =>
+                      prev === activeApp.screens.length - 1 ? 0 : prev + 1
+                    )
+                  }
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 border border-yellow-500/30 flex items-center justify-center text-yellow-400 hover:text-white transition-all duration-300 z-30"
+                  aria-label="Next screenshot"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+
+                {/* Screen Slide Container */}
+                <div className="absolute inset-0 bg-gray-950 flex items-center justify-center">
+                  <motion.img
+                    key={`${activeApp.id}-${activeScreenIndex}`}
+                    src={activeApp.screens[activeScreenIndex].image}
+                    alt={`${activeApp.title} ${activeApp.screens[activeScreenIndex].label}`}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Bottom Home Indicator */}
+                <div className="absolute bottom-2 w-32 h-1 bg-white/40 rounded-full z-30 pointer-events-none" />
+              </div>
+
+              {/* Indicator Bullets below the phone */}
+              <div className="flex gap-2 mt-6">
+                {activeApp.screens.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setActiveScreenIndex(idx)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      activeScreenIndex === idx
+                        ? "bg-yellow-400 w-6"
+                        : "bg-gray-700 hover:bg-gray-600"
+                    }`}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="projects" className="py-24">
         <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 bg-gold-gradient bg-clip-text text-transparent">
-              Featured Projects
+              Web Applications
             </h2>
             <div className="w-24 h-1 bg-gold-gradient mx-auto mb-8 rounded-full"></div>
             <p className="text-gray-400 text-xl">Some of my recent work</p>

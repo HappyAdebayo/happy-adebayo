@@ -22,10 +22,10 @@ import { useState } from "react"
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex space-x-8">
-                    {["About", "Skills", "Projects", "Contact"].map((item) => (
+                    {["About", "Skills", "Projects", "Mobile Apps", "Contact"].map((item) => (
                     <motion.a
                         key={item}
-                        href={`#${item.toLowerCase()}`}
+                        href={item === "Mobile Apps" ? "#mobile-apps" : `#${item.toLowerCase()}`}
                         whileHover={{ scale: 1.1, color: "#FFD700" }}
                         whileTap={{ scale: 0.95 }}
                         className="hover:text-yellow-400 transition-all duration-300 cursor-pointer font-medium relative group"
@@ -57,10 +57,10 @@ import { useState } from "react"
                 className="md:hidden bg-black/95 border-t border-yellow-500/20 overflow-hidden"
                 >
                 <div className="container mx-auto px-6 py-6 space-y-4">
-                    {["About", "Skills", "Projects", "Contact"].map((item) => (
+                    {["About", "Skills", "Projects", "Mobile Apps", "Contact"].map((item) => (
                     <a
                         key={item}
-                        href={`#${item.toLowerCase()}`}
+                        href={item === "Mobile Apps" ? "#mobile-apps" : `#${item.toLowerCase()}`}
                         className="block hover:text-yellow-400 transition-colors font-medium"
                         onClick={() => setIsMenuOpen(false)}
                     >
