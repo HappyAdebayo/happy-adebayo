@@ -1,6 +1,7 @@
 import eccomerce from '@/assets/eccomerce.png';
 import hopehaven from '@/assets/hopehaven.png'
 import frameflow from '@/assets/frameflow.png'
+import backly from '@/assets/website/backly/vbb.png'
 
 // DebtTracker Assets
 import dtLogin from '@/assets/mobile/debtTracker/login.png';
@@ -21,7 +22,8 @@ import {
   Atom,        
   ServerCog,   
   Landmark,    
-  Code2
+  Code2,
+  Database
 } from "lucide-react";
 
 const debtTrackerApk = new URL('../assets/mobile/debtTracker/abk/application-edc38657-c539-48e9-a206-91faab442717.apk', import.meta.url).href;
@@ -48,14 +50,19 @@ const techStack = [
     color: "bg-gradient-to-br from-red-600 to-red-800",
   },
   {
-    name: "Python",
-    icon: Code2,
-    color: "bg-gradient-to-br from-yellow-500 to-yellow-700",
-  },
-  {
     name: "MySQL",
     icon: ServerCog ,
     color: "bg-gradient-to-br from-blue-700 to-blue-900",
+  },
+  {
+    name: "Node.js",
+    icon: Code2,
+    color: "bg-gradient-to-br from-green-600 to-green-800",
+  },
+  {
+    name: "PostgreSQL",
+    icon: Database,
+    color: "bg-gradient-to-br from-blue-400 to-indigo-600",
   },
 ];
 
@@ -86,6 +93,15 @@ const techStack = [
       tech: ["nexjs", "tailwindcss"],
       image: frameflow,
       live: "https://frameflow-sigma.vercel.app/",
+    },
+    {
+      title: "Backly",
+      siteplatform:'Website',
+      description:
+        "Backly is a visual backend builder that enables users to build high-performance backends without writing code. It generates clean code using the MVC architecture pattern across Node.js and PHP, with PostgreSQL as the primary database.",
+      tech: ["Node.js", "PHP", "PostgreSQL"],
+      image: backly,
+      live: "https://www.buildbackly.com",
     },
   ]
 

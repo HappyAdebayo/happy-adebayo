@@ -233,7 +233,7 @@ export default function Portfolio() {
                 {
                   icon: Database,
                   title: "Backend",
-                  desc: "Php, Python, MySQL",
+                  desc: "Php, Node js, MySQL",
                   color: "from-green-500 to-teal-600",
                 },
     
