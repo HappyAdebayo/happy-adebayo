@@ -90,7 +90,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.8 }}
             >
-              <a href="/Happy-Adebayo-CV-Frontend-Developer.docx.pdf" download>
+              <a href="/Happy-Adebayo-CV-Fullstack-Developer.pdf" download>
                 <Button
                   size="lg"
                   className="bg-gold-gradient text-black hover:shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300 font-semibold px-8 py-4 text-lg group"

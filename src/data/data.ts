@@ -1,7 +1,8 @@
-import eccomerce from '@/assets/eccomerce.png';
 import hopehaven from '@/assets/hopehaven.png'
 import frameflow from '@/assets/frameflow.png'
 import backly from '@/assets/website/backly/vbb.png'
+import sms from '@/assets/website/sms/sms.png'
+import hadi from '@/assets/website/ai-web-automation/hadi.png'
 
 // DebtTracker Assets
 import dtLogin from '@/assets/mobile/debtTracker/login.png';
@@ -68,14 +69,23 @@ const techStack = [
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      siteplatform:'Website',
+      title: "Hadi",
+      siteplatform: "Website",
       description:
-        "Full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.",
-      tech: ["React.js", "MySQL", "Paystack", "Tailwind"],
-      image: eccomerce,
-      live: "https://anointedsuperstore.store/",
+        "Hadi is an AI-powered desktop and mobile assistant designed to help users automate everyday tasks using natural language. It can understand user requests, execute automations, manage workflows, and interact with applications to improve productivity. Hadi acts as an intelligent personal assistant that brings AI-driven automation to both computers and mobile devices.",
+      tech: ["Next.js"],
+      image: hadi,
+      live: "https://www.gethadinow.com",
     },
+    {
+    title: "School Management System",
+    siteplatform: "Website",
+    description:
+      "A comprehensive school management system built to streamline academic and administrative operations. The platform provides dedicated portals for administrators, HODs, lecturers, and students, enabling efficient management of courses, departments, attendance, and academic records. It also features an automated attendance system that records and tracks student attendance, reducing manual processes and improving accuracy.",
+    tech: ["PHP", "AJAX", "MySQL"],
+    image: sms, // Replace with a dedicated screenshot if available
+    live: "https://linchub.ifree.page/school-management-system-main",
+  },
     {
       title: "HopeHaven",
       siteplatform:'Website',
