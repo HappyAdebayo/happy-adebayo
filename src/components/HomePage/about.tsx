@@ -1,11 +1,11 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import Happy from "../../assets/happy.png"
 
 const LIME = "#ccff33"
 
 // ---- Edit these ----
 const NAME = "Happy Adebayo"
-const IMAGE = "/about.jpg" // put your photo in /public and update the name
 const TITLE = "Full Stack Mobile App Developer"
 const PARAGRAPH_1 =
   "I'm Happy Adebayo, a Full Stack Developer focused on building mobile and web apps that feel fast and look sharp. I enjoy taking an idea from a rough sketch to a polished product, handling both the interface and the systems behind it."
@@ -32,15 +32,15 @@ const About = () => {
             style={{ background: `radial-gradient(circle at 30% 20%, ${LIME}, transparent 60%)` }}
           />
 
-          <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-white/10 bg-neutral-950">
-            <img
-              src={IMAGE}
-              alt={`${NAME} - About Me`}
-              className="h-full w-full object-cover"
-            />
-            {/* Fade the bottom edge into the page */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
-          </div>
+          
+          <div className="relative flex aspect-[3/4] items-center justify-center overflow-hidden rounded-3xl border border-white/10 bg-neutral-950">
+  <img
+    src={Happy}
+    alt={`${NAME} - About Me`}
+  />
+  {/* Fade the bottom edge into the page */}
+  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent" />
+</div>
         </motion.div>
 
         {/* ---------- Right: text ---------- */}

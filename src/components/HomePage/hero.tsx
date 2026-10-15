@@ -2,11 +2,10 @@ import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Download, Github, Linkedin, Mail, Code2, Smartphone, MessageCircle } from "lucide-react"
-
+import Happy from "../../assets/happy.png"
 // ---- Edit these ----
 const FIRST_NAME = "Happy"
 const LAST_NAME = "Adebayo"
-const PHOTO = "/profile.jpg" // put your photo in /public and update the name
 const CV_FILE = "/Happy-Adebayo-CV-Fullstack-Developer.pdf"
 const TECH_TAG = "REACT NATIVE"
 const WHATSAPP_NUMBER = "2340000000000" // international format, no + or spaces
@@ -199,7 +198,7 @@ const Hero = () => {
           {/* Photo */}
           <div className="absolute inset-[16%] overflow-hidden rounded-full border border-white/10 bg-neutral-900">
             <img
-              src={PHOTO}
+              src={Happy}
               alt={`${FIRST_NAME} ${LAST_NAME}`}
               className="h-full w-full object-cover"
             />

@@ -88,7 +88,7 @@ const Navbar = () => {
           </ul>
 
           {/* Sound toggle */}
-          <button
+         {/* <button
             type="button"
             onClick={() => setIsMuted((m) => !m)}
             aria-label={isMuted ? "Unmute sound" : "Mute sound"}
@@ -96,6 +96,7 @@ const Navbar = () => {
           >
             {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
           </button>
+          */}
 
           {/* Mobile menu button */}
           <Button
