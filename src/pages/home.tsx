@@ -23,7 +23,7 @@ export default function LandingPage() {
       
       <MobileApps/>
 
-      <Contact/>
+      
 
     </div>
   )
