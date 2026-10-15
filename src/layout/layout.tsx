@@ -1,22 +1,20 @@
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Navbar from "@/components/HomePage/navbar";
+import Footer from "@/components/HomePage/footer";
 import { Outlet } from "react-router-dom"
-import { motion,useScroll } from "framer-motion";
+import ParticleBackground from "@/components/particle-background";
+import CustomCursor from "@/components/custom-cursor";
 
-const Layout =()=>{
-      const { scrollYProgress } = useScroll()
-    
-    return(
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
-        <motion.div
-            className="fixed top-0 left-0 right-0 h-1 bg-gold-gradient z-50 shadow-lg shadow-yellow-500/50"
-            style={{ scaleX: scrollYProgress, transformOrigin: "0%" }}
-            />
-        <Navbar/>
-        <Outlet/>
-        <Footer/>
+const Layout = () => {
+
+  return (
+    <div className="relative isolate min-h-screen bg-black text-white overflow-x-hidden">
+      <ParticleBackground />
+      <CustomCursor />
+      <Navbar />
+      <Outlet />
+      <Footer />
     </div>
-    )
+  )
 }
 
 export default Layout

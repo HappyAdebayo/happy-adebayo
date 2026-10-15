@@ -139,7 +139,7 @@ const techStack = [
       screens: [
         { label: "Login", image: lpLogin, description: "Secure, responsive student login interface" },
         { label: "Sign Up", image: lpSignup, description: "Streamlined multi-step student registration" },
-        { label: "Dashboard", image: lpHomescreen, description: "Overview of pending fees and academic standing" },
+        { label: "Home", image: lpHomescreen, description: "Overview of pending fees and academic standing" },
         { label: "Transactions", image: lpTransactions, description: "Detailed list of recent and pending fee payments" },
         { label: "Notifications", image: lpNotifications, description: "Important announcements and deadline warnings" },
         { label: "Profile", image: lpProfile, description: "Personal details and financial configuration" },
