@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Smartphone, Code2, Server, Wrench, type LucideIcon } from "lucide-react"
+import { Server, Database, Wrench, type LucideIcon } from "lucide-react"
 
 const LIME = "#ccff33"
 
@@ -12,51 +12,36 @@ type SkillGroup = {
 // Edit these to match your real stack
 const SKILL_GROUPS: SkillGroup[] = [
   {
-    icon: Smartphone,
-    title: "Mobile",
-    skills: [
-      "React Native",
-      "Expo",
-      "TypeScript",
-      "Navigation",
-      "State Management",
-      "Push Notifications",
-      "App Store Release",
-    ],
-  },
-  {
-    icon: Code2,
-    title: "Frontend",
-    skills: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-      "Framer Motion",
-    ],
-  },
-  {
     icon: Server,
-    title: "Backend & Data",
+    title: "Backend & APIs",
     skills: [
       "Node.js",
-      "Php",
+      "Express.js",
+      "PHP",
       "Laravel",
-      "Express",
       "REST APIs",
-      "Authentication",
+      "JWT Auth",
+      "Middleware",
+      "MVC Architecture",
+      "Swagger / OpenAPI",
+    ],
+  },
+  {
+    icon: Database,
+    title: "Databases",
+    skills: [
       "PostgreSQL",
+      "MySQL",
       "MongoDB",
+      "Schema Design",
+      "Query Optimisation",
       "Firebase",
     ],
   },
   {
     icon: Wrench,
     title: "Tools & Platform",
-    skills: ["Git", "GitHub", "Vercel", "Postman", "Responsive Design", "Accessibility"],
+    skills: ["Git", "GitHub", "Postman", "Render", "Vercel", "Linux CLI", "Swagger UI"],
   },
 ]
 

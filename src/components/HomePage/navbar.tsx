@@ -9,7 +9,6 @@ const NAV_ITEMS = [
   { label: "Home", id: "home" },
   { label: "Services", id: "services" },
   { label: "About", id: "about" },
-  { label: "Mobile App", id: "mobile-apps" },
   { label: "Portfolio", id: "portfolio" },
   { label: "Contact", id: "contact" },
 ]

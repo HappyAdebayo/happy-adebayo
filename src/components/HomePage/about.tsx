@@ -6,11 +6,11 @@ const LIME = "#ccff33"
 
 // ---- Edit these ----
 const NAME = "Happy Adebayo"
-const TITLE = "Full Stack Mobile App Developer"
+const TITLE = "Back-End Developer"
 const PARAGRAPH_1 =
-  "I'm Happy Adebayo, a Full Stack Developer focused on building mobile and web apps that feel fast and look sharp. I enjoy taking an idea from a rough sketch to a polished product, handling both the interface and the systems behind it."
+  "I'm Happy Adebayo, a Back-End Developer focused on building the systems that power great products. I enjoy solving complex server-side problems — designing APIs, modelling databases, and writing clean, maintainable code that holds up at scale."
 const PARAGRAPH_2 =
-  "My expertise lies in React Native apps, full-stack web products, REST APIs, and databases, with a strong eye for clean, usable design."
+  "My expertise spans REST APIs, Node.js, PHP/Laravel, PostgreSQL, and modular MVC architecture, with a strong eye for security and system design."
 // --------------------
 
 const About = () => {
@@ -61,7 +61,7 @@ const About = () => {
 
           <p className="mt-6 text-lg leading-relaxed text-white/60 md:text-xl">{PARAGRAPH_1}</p>
 
-          <p className="mt-6 text-lg leading-relaxed text-[#8aa0c8]">{PARAGRAPH_2}</p>
+          <p className="mt-6 text-lg leading-relaxed text-white/60">{PARAGRAPH_2}</p>
 
           <a href="#portfolio" className="mt-10 inline-block">
             <Button

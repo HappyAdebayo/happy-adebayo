@@ -1,8 +1,4 @@
-import hopehaven from '@/assets/hopehaven.png'
-import frameflow from '@/assets/frameflow.png'
-import backly from '@/assets/website/backly/vbb.png'
-import sms from '@/assets/website/sms/sms.png'
-import hadi from '@/assets/website/ai-web-automation/hadi.png'
+import backly from '@/assets/website/backly/backly-logo.png'
 
 // DebtTracker Assets
 import dtLogin from '@/assets/mobile/debtTracker/login.png';
@@ -19,10 +15,9 @@ import lpNotifications from '@/assets/mobile/lincpay/notification-screen.png';
 import lpProfile from '@/assets/mobile/lincpay/profile-screen.png';
 
 import {
-  FileCode,    
-  Atom,        
-  ServerCog,   
-  Landmark,    
+  FileCode,
+  ServerCog,
+  Landmark,
   Code2,
   Database
 } from "lucide-react";
@@ -30,16 +25,6 @@ import {
 const debtTrackerApk = new URL('../assets/mobile/debtTracker/abk/application-edc38657-c539-48e9-a206-91faab442717.apk', import.meta.url).href;
 
 const techStack = [
-  {
-    name: "React.js",
-    icon: Atom,
-    color: "bg-gradient-to-br from-blue-500 to-blue-700",
-  },
-  {
-    name: "React Native",
-    icon: Atom ,
-    color: "bg-gradient-to-br from-indigo-500 to-indigo-700",
-  },
   {
     name: "PHP",
     icon: FileCode,
@@ -52,7 +37,7 @@ const techStack = [
   },
   {
     name: "MySQL",
-    icon: ServerCog ,
+    icon: ServerCog,
     color: "bg-gradient-to-br from-blue-700 to-blue-900",
   },
   {
@@ -69,49 +54,14 @@ const techStack = [
 
   const projects = [
     {
-      title: "Hadi",
-      siteplatform: "Website",
-      description:
-        "Hadi is an AI-powered desktop and mobile assistant designed to help users automate everyday tasks using natural language. It can understand user requests, execute automations, manage workflows, and interact with applications to improve productivity. Hadi acts as an intelligent personal assistant that brings AI-driven automation to both computers and mobile devices.",
-      tech: ["Next.js"],
-      image: hadi,
-      live: "https://www.gethadinow.com",
-    },
-    {
-    title: "School Management System",
-    siteplatform: "Website",
-    description:
-      "A comprehensive school management system built to streamline academic and administrative operations. The platform provides dedicated portals for administrators, HODs, lecturers, and students, enabling efficient management of courses, departments, attendance, and academic records. It also features an automated attendance system that records and tracks student attendance, reducing manual processes and improving accuracy.",
-    tech: ["PHP", "AJAX", "MySQL"],
-    image: sms, // Replace with a dedicated screenshot if available
-    live: "https://linchub.ifree.page/school-management-system-main",
-  },
-    {
-      title: "HopeHaven",
-      siteplatform:'Website',
-      description:
-        "HopeHaven is a modern orphanage website designed to create awareness, encourage donations, and connect volunteers with children in need. The platform focuses on a warm, trustworthy user experience with clear navigation, impactful storytelling, and responsive design.",
-      tech: ["nexjs", "tailwindcss"],
-      image: hopehaven,
-      live: "https://hope-haven-of4y.vercel.app/",
-    },
-    {
-      title: "FrameFlow",
-      siteplatform:'Website',
-      description:
-        "FrameFlow is a modern photography portfolio website designed to showcase high-quality visual work in a clean, immersive layout. Built with a dark, minimal aesthetic, it focuses on highlighting photography through bold imagery, smooth interactions, and an intuitive gallery experience with category filtering and lightbox previews.",
-      tech: ["nexjs", "tailwindcss"],
-      image: frameflow,
-      live: "https://frameflow-sigma.vercel.app/",
-    },
-    {
       title: "Backly",
-      siteplatform:'Website',
+      siteplatform: "REST API",
       description:
-        "Backly is a visual backend builder that enables users to build high-performance backends without writing code. It generates clean code using the MVC architecture pattern across Node.js and PHP, with PostgreSQL as the primary database.",
-      tech: ["Node.js", "PHP", "PostgreSQL"],
+        "Backly is a visual backend builder that lets developers spin up production-ready REST APIs without writing boilerplate. It follows a Modular MVC architecture, generating clean, maintainable Node.js and PHP server code backed by PostgreSQL — complete with JWT authentication, role-based access control, and auto-generated Swagger documentation.",
+      tech: ["Node.js", "PHP", "PostgreSQL", "REST API", "Modular MVC"],
       image: backly,
       live: "https://www.buildbackly.com",
+      docs: "https://backly-server.onrender.com/api-docs/",
     },
   ]
 

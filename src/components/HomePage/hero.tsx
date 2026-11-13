@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Download, Github, Linkedin, Mail, Code2, Smartphone, MessageCircle } from "lucide-react"
+import { Download, Github, Linkedin, Mail, Code2, Server, MessageCircle } from "lucide-react"
 import Happy from "../../assets/happy.png"
 // ---- Edit these ----
 const FIRST_NAME = "Happy"
 const LAST_NAME = "Adebayo"
-const CV_FILE = "/Happy-Adebayo-CV-Fullstack-Developer.pdf"
-const TECH_TAG = "REACT NATIVE"
-const WHATSAPP_NUMBER = "2340000000000" // international format, no + or spaces
-const ROLES = ["Full Stack Developer", "Mobile App Developer", "Back-End Developer", "Front-End Developer"]
+const CV_FILE = "/Happy-Adebayo-CV-Backend-Developer.pdf"
+const TECH_TAG = "NODE.JS / PHP"
+const WHATSAPP_NUMBER = "2349059827274" // international format, no + or spaces
+const ROLES = ["Back-End Developer", "Server-Side Developer", "Database Architect"]
 
 const SOCIALS = [
   { icon: Github, label: "GitHub", href: "https://github.com/HappyAdebayo" },
@@ -106,18 +106,18 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 0.7 }}
             className="mt-8 max-w-xl text-lg leading-relaxed text-white/60 md:text-xl"
           >
-            I build fast, polished mobile and web apps, from the interface down to
-            the API and database behind it.
+            I design and build secure, scalable server-side systems — REST APIs,
+            databases, and the backend logic that powers great products.
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.65, duration: 0.7 }}
-            className="mt-4 max-w-xl leading-relaxed text-[#8aa0c8]"
+            className="mt-4 max-w-xl leading-relaxed text-white/60"
           >
-            Focused on React Native apps, full-stack web products, and the cutting-edge
-            tools that make them ship faster.
+            Focused on Node.js, PHP/Laravel, PostgreSQL, and clean MVC architecture
+            that scales without surprises.
           </motion.p>
 
           {/* Buttons */}
@@ -211,7 +211,7 @@ const Hero = () => {
             className="absolute left-[2%] top-[34%] flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-black/80 backdrop-blur"
             style={{ color: LIME }}
           >
-            <Smartphone className="h-6 w-6" />
+            <Server className="h-6 w-6" />
           </motion.div>
 
           <motion.div

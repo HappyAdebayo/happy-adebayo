@@ -3,8 +3,8 @@ import { ArrowUp } from "lucide-react"
 // ---- Edit these ----
 const LOGO = "HAPPY."
 const NAME = "Happy Adebayo"
-const TAGLINE = "Full Stack Mobile App Developer"
-const WHATSAPP_NUMBER = "2340000000000" // international format, no + or spaces
+const TAGLINE = "Back-End Developer"
+const WHATSAPP_NUMBER = "2349059827274" // international format, no + or spaces
 
 const LINKS = [
   { label: "GitHub", href: "https://github.com/HappyAdebayo" },

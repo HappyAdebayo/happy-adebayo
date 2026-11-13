@@ -1,11 +1,11 @@
 import { motion } from "framer-motion"
 import {
-  Smartphone,
-  Code2,
   Server,
   Database,
+  ShieldCheck,
   Layers,
   Rocket,
+  FileJson,
   type LucideIcon,
 } from "lucide-react"
 
@@ -20,40 +20,40 @@ type Service = {
 // Edit these to match what you actually offer
 const SERVICES: Service[] = [
   {
-    icon: Smartphone,
-    title: "Mobile App Development",
+    icon: FileJson,
+    title: "REST API Design",
     description:
-      "Building smooth, cross-platform iOS and Android apps with React Native, from first screen to store release.",
+      "Building clean, well-documented REST APIs using Node.js and PHP that are easy to integrate, version, and extend.",
   },
   {
-    icon: Code2,
-    title: "Web Development",
+    icon: Layers,
+    title: "Modular MVC Architecture",
     description:
-      "Fast, responsive, and accessible websites and web apps built with modern React tooling.",
+      "Structuring server-side code with modular MVC patterns so every part of the system is predictable and easy to maintain.",
   },
   {
     icon: Server,
-    title: "Backend & APIs",
+    title: "Backend Development",
     description:
-      "Secure, well-documented REST APIs and server logic that your apps can rely on as they grow.",
+      "End-to-end server-side logic — routing, controllers, middleware, and business rules — built for reliability and speed.",
   },
   {
     icon: Database,
     title: "Database Design",
     description:
-      "Clean data models and efficient queries, so your product stays quick and easy to maintain.",
+      "Clean relational schemas, efficient queries, and optimised indexes in PostgreSQL and MySQL that keep your data fast and consistent.",
   },
   {
-    icon: Layers,
-    title: "UI Implementation",
+    icon: ShieldCheck,
+    title: "Auth & Security",
     description:
-      "Turning Figma designs into pixel-accurate, animated interfaces that feel great on every screen size.",
+      "Implementing JWT auth, role-based access control, input validation, and security best practices across every endpoint.",
   },
   {
     icon: Rocket,
     title: "Deployment & Support",
     description:
-      "Shipping your product to production, setting up CI/CD, and keeping it running smoothly after launch.",
+      "Shipping APIs to production, setting up environment configs, and keeping services running smoothly after launch.",
   },
 ]
 
