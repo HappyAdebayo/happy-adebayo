@@ -6,7 +6,7 @@ import Happy from "../../assets/happy.png"
 // ---- Edit these ----
 const FIRST_NAME = "Happy"
 const LAST_NAME = "Adebayo"
-const CV_FILE = "/Happy-Adebayo-CV-Backend-Developer.pdf"
+const CV_FILE = "/Adebayo_Happy_Node-Backend-cv.pdf"
 const TECH_TAG = "NODE.JS / PHP"
 const WHATSAPP_NUMBER = "2349059827274" // international format, no + or spaces
 const ROLES = ["Back-End Developer", "Server-Side Developer", "Database Architect"]
