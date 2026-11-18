@@ -1,4 +1,5 @@
 import backly from '@/assets/website/backly/backly-logo.png'
+import shopforge from '@/assets/website/shopforge/shopforge.png'
 
 
 import {
@@ -48,6 +49,26 @@ const techStack = [
       image: backly,
       live: "https://www.buildbackly.com",
       docs: "https://backly-server.onrender.com/api-docs/",
+    },
+    {
+      title: "ShopForge",
+      siteplatform: "REST API",
+      description:
+        "ShopForge is an e-commerce backend built with a microservices architecture in a monorepo. It uses independently structured services to handle core e-commerce functionality, with RabbitMQ for inter-service communication. It provides RESTful API endpoints, JWT authentication, and Swagger documentation for API exploration and testing.",
+      tech: [
+        "Node.js",
+        "Express.js",
+        "Microservices",
+        "RabbitMQ",
+        "SQLite",
+        "REST API",
+        "Swagger",
+        "Docker"
+      ],
+      image: shopforge,
+      live: "",
+      githubLink:"https://github.com/HappyAdebayo/shopforge-backend",
+      docs: "",
     },
   ]
 

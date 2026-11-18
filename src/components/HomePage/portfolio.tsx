@@ -9,7 +9,6 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="relative px-6 py-28">
       <div className="container mx-auto">
-        {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -72,12 +71,12 @@ const Portfolio = () => {
                 {/* Links pinned to the bottom */}
                 <div className="mt-auto pt-8 flex flex-row flex-wrap gap-3">
                   <a
-                    href={project.live}
+                    href={project.live || project.githubLink}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 rounded-full border border-[#ccff33]/60 px-6 py-3 text-xs font-bold uppercase tracking-[0.15em] text-[#ccff33] transition-colors hover:bg-[#ccff33] hover:text-black"
                   >
-                    View Site
+                    {project.live ? "View Site":"Github Link"}
                     <ExternalLink className="h-4 w-4" />
                   </a>
                   {project.docs && (
